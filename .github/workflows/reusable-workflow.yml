@@ -1,7 +1,7 @@
 name: Reusable Workflow
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       node:
         required: true
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Output the input value
         run: |
